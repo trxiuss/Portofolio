@@ -9,7 +9,7 @@
   [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-  [Live Demo](https://your-username.github.io/portfolio-template) • [Key Features](#-features) • [Customization Guide](#-customization-guide) • [Deployment](#-deployment)
+  [Live Demo](https://trxiuss.github.io/Portofolio) • [Key Features](#-features) • [Customization Guide](#%EF%B8%8F-customization-guide) • [Deployment](#-deployment-options)
 
 </div>
 
@@ -55,8 +55,8 @@ Portofolio/
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/trxiuss/Portofolio.git](https://github.com/your-username/portfolio-template.git)
-cd portfolio-template
+git clone [https://github.com/trxiuss/Portofolio.git](https://github.com/trxiuss/Portofolio.git)
+cd Portofolio
 ```
 
 ### 2. Run Locally
