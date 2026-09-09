@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="trxiuss — Frontend Developer & UI/UX Designer. Kurumsal standartta web arayüzleri, tasarım sistemleri ve yüksek performanslı dijital ürünler.">
+  <meta name="keywords" content="frontend developer, ui ux designer, portfolio, react, typescript, trxiuss">
+  <meta name="author" content="trxiuss">
+  <meta name="theme-color" content="#0b0a0d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="trxiuss | Frontend Developer & UI/UX Designer">
+  <meta property="og:description" content="Kurumsal standartta web arayüzleri, tasarım sistemleri ve yüksek performanslı dijital ürünler.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>trxiuss | Frontend Developer & UI/UX Designer</title>
+  <link rel="icon" href="assets/icons/favicon.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <span class="glow glow-a"></span>
+    <span class="glow glow-b"></span>
+    <span class="glow glow-c"></span>
+    <span class="grid"></span>
+    <span class="vignette"></span>
+  </div>
+
+  <div class="scroll-progress"><span id="scrollBar"></span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="trxiuss">
+        <span class="brand-mark">T</span>
+        <span class="brand-text">trxiuss<em>.dev</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Ana menü">
+        <a href="#home" class="nav-link is-active" data-i18n="nav_home">Ana Sayfa</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">Hakkımda</a>
+        <a href="#services" class="nav-link" data-i18n="nav_services">Hizmetler</a>
+        <a href="#stack" class="nav-link" data-i18n="nav_stack">Stack</a>
+        <a href="#projects" class="nav-link" data-i18n="nav_projects">Projeler</a>
+        <a href="#process" class="nav-link" data-i18n="nav_process">Süreç</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langBtn" type="button" aria-label="Dili değiştir">
+          <i class="fas fa-globe"></i><span id="langLabel">TR</span>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta" data-i18n="nav_cta">Teklif Al</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill reveal"><span class="pill-dot"></span><span data-i18n="hero_badge">Frontend Developer & UI/UX Designer</span></span>
+          <h1 class="hero-title reveal">
+            <span data-i18n="hero_line1">Dijital ürünlerinizi</span>
+            <span class="grad" data-i18n="hero_line2">kurumsal standartta</span>
+            <span data-i18n="hero_line3">hayata geçiriyorum.</span>
+          </h1>
+          <p class="hero-desc reveal" data-i18n="hero_desc">Ölçeklenebilir arayüz mimarileri, erişilebilirlik odaklı tasarım sistemleri ve ölçülebilir performans. Fikirden yayına kadar uçtan uca üretim.</p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary"><span data-i18n="cta_projects">Projeleri İncele</span><i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-ghost"><span data-i18n="cta_contact">İletişime Geç</span></a>
+          </div>
+          <div class="hero-stats reveal">
+            <div class="stat card"><strong class="counter" data-target="5">0</strong><span data-i18n="stat_years">Yıl Deneyim</span></div>
+            <div class="stat card"><strong class="counter" data-target="48" data-suffix="+">0</strong><span data-i18n="stat_projects">Tamamlanan Proje</span></div>
+            <div class="stat card"><strong class="counter" data-target="32" data-suffix="+">0</strong><span data-i18n="stat_clients">Memnun Müşteri</span></div>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="portrait card">
+            <div class="portrait-ring"></div>
+            <img src="assets/images/profile.png" alt="trxiuss portre" loading="lazy" width="360" height="360">
+            <span class="portrait-status"><span class="pill-dot"></span><span data-i18n="status_available">Yeni projelere açık</span></span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Aşağı kaydır"><span></span></a>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="tag" data-i18n="about_tag">Hakkımda</span>
+          <h2 class="section-title" data-i18n="about_title">Tasarım ile mühendisliği aynı masada buluşturuyorum</h2>
+          <p class="section-sub" data-i18n="about_sub">Kurumsal ekiplerle çalışırken netlik, sürdürülebilirlik ve ölçülebilir sonuç önceliğimdir.</p>
+        </header>
+        <div class="about-grid">
+          <div class="about-text card reveal">
+            <p data-i18n="about_p1">Beş yılı aşkın süredir kurumsal web uygulamaları, yönetim panelleri ve ürün siteleri geliştiriyorum. Her projeye ölçülebilir hedeflerle başlıyor, teknik borç bırakmayan bir mimari kuruyorum.</p>
+            <p data-i18n="about_p2">Tasarım sistemleri, bileşen kütüphaneleri ve performans bütçeleri ile ekiplerin uzun vadede hızlı kalmasını sağlıyorum. Erişilebilirlik ve SEO, sonradan eklenen değil baştan planlanan başlıklardır.</p>
+            <ul class="check-list">
+              <li><i class="fas fa-circle-check"></i><span data-i18n="about_c1">Ölçülebilir performans hedefleri</span></li>
+              <li><i class="fas fa-circle-check"></i><span data-i18n="about_c2">WCAG uyumlu erişilebilirlik</span></li>
+              <li><i class="fas fa-circle-check"></i><span data-i18n="about_c3">Dokümante edilmiş tasarım sistemi</span></li>
+              <li><i class="fas fa-circle-check"></i><span data-i18n="about_c4">Yayın sonrası bakım ve destek</span></li>
+            </ul>
+          </div>
+          <div class="about-side">
+            <article class="card mini-card reveal">
+              <span class="mini-icon"><i class="fas fa-gauge-high"></i></span>
+              <h4 data-i18n="about_m1">Performans</h4>
+              <p data-i18n="about_m1_d">Lighthouse 95+ hedefiyle optimize edilmiş yükleme ve etkileşim süreleri.</p>
+            </article>
+            <article class="card mini-card reveal">
+              <span class="mini-icon"><i class="fas fa-shield-halved"></i></span>
+              <h4 data-i18n="about_m2">Güvenilirlik</h4>
+              <p data-i18n="about_m2_d">Test edilebilir kod, sürüm kontrolü ve şeffaf teslim süreci.</p>
+            </article>
+            <article class="card mini-card reveal">
+              <span class="mini-icon"><i class="fas fa-people-group"></i></span>
+              <h4 data-i18n="about_m3">İş Birliği</h4>
+              <p data-i18n="about_m3_d">Haftalık raporlama, net kapsam ve öngörülebilir zaman planı.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="tag" data-i18n="serv_tag">Hizmetler</span>
+          <h2 class="section-title" data-i18n="serv_title">Neler yapabiliyorum</h2>
+          <p class="section-sub" data-i18n="serv_sub">Uçtan uca ürün geliştirme sürecinin her aşamasında destek.</p>
+        </header>
+        <div class="grid-3">
+          <article class="card service-card reveal">
+            <span class="card-icon"><i class="fas fa-code"></i></span>
+            <h3 data-i18n="serv1">Web Geliştirme</h3>
+            <p data-i18n="serv1_d">React, TypeScript ve modern CSS mimarileri ile ölçeklenebilir, bakımı kolay arayüzler.</p>
+            <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Vite</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="card-icon"><i class="fas fa-pen-ruler"></i></span>
+            <h3 data-i18n="serv2">UI/UX Tasarım</h3>
+            <p data-i18n="serv2_d">Kullanıcı akışları, prototipleme ve tutarlı tasarım belirteçleriyle kurumsal arayüz dili.</p>
+            <ul class="tag-list"><li>Figma</li><li>Design Tokens</li><li>Prototype</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="card-icon"><i class="fas fa-server"></i></span>
+            <h3 data-i18n="serv3">Backend & Entegrasyon</h3>
+            <p data-i18n="serv3_d">Node.js servisleri, REST API tasarımı, veritabanı modelleme ve üçüncü parti entegrasyonlar.</p>
+            <ul class="tag-list"><li>Node.js</li><li>PostgreSQL</li><li>REST</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="card-icon"><i class="fas fa-mobile-screen"></i></span>
+            <h3 data-i18n="serv4">Responsive Mimari</h3>
+            <p data-i18n="serv4_d">Mobil öncelikli düzenler; telefondan geniş monitöre kadar kusursuz ve tutarlı deneyim.</p>
+            <ul class="tag-list"><li>Mobile First</li><li>Fluid Grid</li><li>A11y</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="card-icon"><i class="fas fa-magnifying-glass-chart"></i></span>
+            <h3 data-i18n="serv5">SEO & Analitik</h3>
+            <p data-i18n="serv5_d">Teknik SEO, yapılandırılmış veri ve ölçüm altyapısı ile görünürlüğü artıran kurulum.</p>
+            <ul class="tag-list"><li>Core Web Vitals</li><li>Schema</li><li>GA4</li></ul>
+          </article>
+          <article class="card service-card reveal">
+            <span class="card-icon"><i class="fas fa-rocket"></i></span>
+            <h3 data-i18n="serv6">Yayın & Bakım</h3>
+            <p data-i18n="serv6_d">CI/CD kurulumu, izleme, hata takibi ve düzenli bakım paketleriyle sürdürülebilir yayın.</p>
+            <ul class="tag-list"><li>CI/CD</li><li>Monitoring</li><li>Support</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="tag" data-i18n="stack_tag">Teknoloji</span>
+          <h2 class="section-title" data-i18n="stack_title">Programlama stack'im</h2>
+          <p class="section-sub" data-i18n="stack_sub">Projelerde aktif olarak kullandığım diller ve teknolojiler.</p>
+        </header>
+        <div class="grid-4">
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fab fa-html5"></i></span><h4>HTML5</h4><span class="level" data-i18n="lvl_expert">Uzman</span><div class="bar"><span style="--w:96%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fab fa-css3-alt"></i></span><h4>CSS3</h4><span class="level" data-i18n="lvl_expert">Uzman</span><div class="bar"><span style="--w:94%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fab fa-js"></i></span><h4>JavaScript</h4><span class="level" data-i18n="lvl_expert">Uzman</span><div class="bar"><span style="--w:92%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fab fa-react"></i></span><h4>React</h4><span class="level" data-i18n="lvl_advanced">İleri Seviye</span><div class="bar"><span style="--w:88%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fas fa-t"></i></span><h4>TypeScript</h4><span class="level" data-i18n="lvl_advanced">İleri Seviye</span><div class="bar"><span style="--w:85%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fab fa-node-js"></i></span><h4>Node.js</h4><span class="level" data-i18n="lvl_advanced">İleri Seviye</span><div class="bar"><span style="--w:82%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fas fa-database"></i></span><h4>PostgreSQL</h4><span class="level" data-i18n="lvl_mid">Orta - İleri</span><div class="bar"><span style="--w:75%"></span></div></article>
+          <article class="card stack-card reveal"><span class="stack-icon"><i class="fab fa-git-alt"></i></span><h4>Git</h4><span class="level" data-i18n="lvl_expert">Uzman</span><div class="bar"><span style="--w:90%"></span></div></article>
+        </div>
+        <div class="logo-row reveal">
+          <div class="card logo-card"><img src="assets/images/cloudflare.png" alt="Cloudflare" loading="lazy"></div>
+          <div class="card logo-card"><img src="assets/images/cpanel.png" alt="cPanel" loading="lazy"></div>
+          <div class="card logo-card"><img src="assets/images/comnet.png" alt="Comnet" loading="lazy"></div>
+          <div class="card logo-card"><img src="assets/images/pendc.png" alt="PenDC" loading="lazy"></div>
+          <div class="card logo-card"><img src="assets/images/windows.png" alt="Windows" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="tag" data-i18n="proj_tag">Portfolyo</span>
+          <h2 class="section-title" data-i18n="proj_title">Seçili projeler</h2>
+          <p class="section-sub" data-i18n="proj_sub">Kurumsal ölçekte teslim edilen ürünlerden bir seçki.</p>
+        </header>
+        <div class="grid-2">
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="card-icon"><i class="fas fa-chart-line"></i></span>
+              <span class="badge" data-i18n="badge_featured">Öne Çıkan</span>
+            </div>
+            <span class="cat" data-i18n="proj_cat_web">Web Uygulaması</span>
+            <h3 data-i18n="proj1">Aura Analytics</h3>
+            <p data-i18n="proj1_d">Gerçek zamanlı kurumsal analitik paneli. Rol bazlı yetkilendirme, interaktif grafikler ve raporlama modülü.</p>
+            <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Chart.js</li><li>REST API</li></ul>
+            <div class="project-links">
+              <a href="#projects" class="link-btn"><i class="fas fa-arrow-up-right-from-square"></i><span data-i18n="link_live">Canlı</span></a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fab fa-github"></i><span data-i18n="link_code">Kaynak</span></a>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="card-icon"><i class="fas fa-robot"></i></span>
+              <span class="badge" data-i18n="badge_active">Aktif</span>
+            </div>
+            <span class="cat" data-i18n="proj_cat_platform">Otomasyon Platformu</span>
+            <h3 data-i18n="proj2">Nova Assist</h3>
+            <p data-i18n="proj2_d">Ekip içi süreçleri otomatikleştiren bot ve panel çözümü. Biletleme, görev takibi ve webhook entegrasyonları.</p>
+            <ul class="tag-list"><li>Node.js</li><li>MongoDB</li><li>Webhooks</li><li>Docker</li></ul>
+            <div class="project-links">
+              <a href="#projects" class="link-btn"><i class="fas fa-arrow-up-right-from-square"></i><span data-i18n="link_live">Canlı</span></a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fab fa-github"></i><span data-i18n="link_code">Kaynak</span></a>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="card-icon"><i class="fas fa-layer-group"></i></span>
+              <span class="badge">v2.0</span>
+            </div>
+            <span class="cat" data-i18n="proj_cat_ds">Tasarım Sistemi</span>
+            <h3 data-i18n="proj3">Pulse Design System</h3>
+            <p data-i18n="proj3_d">Kurumsal bileşen kütüphanesi. Erişilebilirlik standartları, tasarım belirteçleri ve Storybook dokümantasyonu.</p>
+            <ul class="tag-list"><li>Figma</li><li>Storybook</li><li>SCSS</li><li>Tokens</li></ul>
+            <div class="project-links">
+              <a href="#projects" class="link-btn"><i class="fas fa-arrow-up-right-from-square"></i><span data-i18n="link_docs">Doküman</span></a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fab fa-github"></i><span data-i18n="link_code">Kaynak</span></a>
+            </div>
+          </article>
+          <article class="card project-card reveal">
+            <div class="project-top">
+              <span class="card-icon"><i class="fas fa-bag-shopping"></i></span>
+              <span class="badge" data-i18n="badge_fast">Yüksek Performans</span>
+            </div>
+            <span class="cat" data-i18n="proj_cat_ecom">E-Ticaret</span>
+            <h3 data-i18n="proj4">ShopFlow Commerce</h3>
+            <p data-i18n="proj4_d">Mobil öncelikli vitrin ve ödeme akışı. Gelişmiş filtreleme, sepet yönetimi ve ölçüm altyapısı.</p>
+            <ul class="tag-list"><li>Next.js</li><li>Stripe</li><li>Tailwind</li><li>Edge</li></ul>
+            <div class="project-links">
+              <a href="#projects" class="link-btn"><i class="fas fa-arrow-up-right-from-square"></i><span data-i18n="link_live">Canlı</span></a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fab fa-github"></i><span data-i18n="link_code">Kaynak</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="tag" data-i18n="proc_tag">Çalışma Şekli</span>
+          <h2 class="section-title" data-i18n="proc_title">Şeffaf ve öngörülebilir süreç</h2>
+          <p class="section-sub" data-i18n="proc_sub">Her aşamada net çıktı, net takvim ve net iletişim.</p>
+        </header>
+        <div class="grid-4">
+          <article class="card step-card reveal"><span class="step-no">01</span><h4 data-i18n="proc1">Keşif</h4><p data-i18n="proc1_d">Hedefler, kapsam ve başarı ölçütlerinin belirlenmesi.</p></article>
+          <article class="card step-card reveal"><span class="step-no">02</span><h4 data-i18n="proc2">Tasarım</h4><p data-i18n="proc2_d">Akışlar, wireframe ve yüksek çözünürlüklü arayüz tasarımı.</p></article>
+          <article class="card step-card reveal"><span class="step-no">03</span><h4 data-i18n="proc3">Geliştirme</h4><p data-i18n="proc3_d">Bileşen bazlı üretim, kod incelemesi ve test süreçleri.</p></article>
+          <article class="card step-card reveal"><span class="step-no">04</span><h4 data-i18n="proc4">Yayın</h4><p data-i18n="proc4_d">Devreye alma, izleme kurulumu ve bakım planı.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="tag" data-i18n="cont_tag">İletişim</span>
+          <h2 class="section-title" data-i18n="cont_title">Birlikte çalışalım</h2>
+          <p class="section-sub" data-i18n="cont_sub">Proje talepleriniz ve iş birlikleri için bana ulaşın.</p>
+        </header>
+        <div class="grid-3">
+          <button type="button" class="card contact-card reveal" id="copyEmail">
+            <span class="card-icon"><i class="fas fa-envelope"></i></span>
+            <span class="contact-name">Email</span>
+            <span class="contact-sub">hello@trxiuss.dev</span>
+            <span class="badge" data-i18n="cont_copy">Kopyala</span>
+          </button>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="card contact-card reveal">
+            <span class="card-icon"><i class="fab fa-github"></i></span>
+            <span class="contact-name">GitHub</span>
+            <span class="contact-sub">github.com/trxiuss</span>
+            <span class="badge" data-i18n="cont_visit">Ziyaret Et</span>
+          </a>
+          <a href="https://discord.com/users/" target="_blank" rel="noopener noreferrer" class="card contact-card reveal">
+            <span class="card-icon"><i class="fab fa-discord"></i></span>
+            <span class="contact-name">Discord</span>
+            <span class="contact-sub">@trxiuss</span>
+            <span class="badge" data-i18n="cont_connect">Bağlan</span>
+          </a>
+        </div>
+        <div class="cta-banner card reveal">
+          <div>
+            <h3 data-i18n="cta_title">Projenizi konuşalım</h3>
+            <p data-i18n="cta_desc">Kapsamınızı paylaşın, 24 saat içinde yol haritası ve teklif ile dönüş yapayım.</p>
+          </div>
+          <a href="mailto:hello@trxiuss.dev" class="btn btn-primary"><span data-i18n="cta_mail">E-posta Gönder</span><i class="fas fa-paper-plane"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">T</span>
+        <span class="brand-text">trxiuss<em>.dev</em></span>
+      </a>
+      <nav class="footer-nav" aria-label="Alt menü">
+        <a href="#about" data-i18n="nav_about">Hakkımda</a>
+        <a href="#services" data-i18n="nav_services">Hizmetler</a>
+        <a href="#projects" data-i18n="nav_projects">Projeler</a>
+        <a href="#contact" data-i18n="nav_contact">İletişim</a>
+      </nav>
+      <p class="footer-copy">© <span id="year">2026</span> trxiuss. <span data-i18n="footer_rights">Tüm hakları saklıdır.</span></p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Yukarı kaydır"><i class="fas fa-arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>

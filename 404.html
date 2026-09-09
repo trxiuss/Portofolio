@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | trxiuss</title>
+  <link rel="icon" href="assets/icons/favicon.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nf-page { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 30px; }
+    .nf-card { padding: 56px 40px; max-width: 540px; width: 100%; }
+    .nf-code {
+      font-size: clamp(5rem, 18vw, 9.5rem); font-weight: 800; line-height: 1;
+      background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 10px 30px rgba(255, 77, 0, .35)); margin-bottom: 14px;
+      animation: nf-float 4s var(--ease) infinite alternate;
+    }
+    @keyframes nf-float { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+    .nf-desc { color: var(--muted); font-size: 1.05rem; margin: 10px 0 32px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <div class="bg-layer" aria-hidden="true">
+    <span class="glow glow-a"></span>
+    <span class="glow glow-b"></span>
+    <span class="glow glow-c"></span>
+  </div>
+  <main class="nf-page">
+    <div class="nf-card card">
+      <h1 class="nf-code">404</h1>
+      <h2 style="font-size:1.5rem; margin-bottom:6px;">Sayfa Bulunamadı</h2>
+      <p class="nf-desc">Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.</p>
+      <a href="index.html" class="btn btn-primary">Ana Sayfaya Dön</a>
+    </div>
+  </main>
+</body>
+</html>
